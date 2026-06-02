@@ -1,0 +1,5 @@
+menu "Part_table"
+	config FLASH_PARTITION_USER
+		bool "Enable flash partition user"
+		default y
+endmenu

@@ -1,0 +1,6 @@
+# Reduce startup log noise for the bk7239n module.
+# Keep AT command routing on the shared UART, so async shell handling must stay enabled.
+CONFIG_LOG_LEVEL=1
+CONFIG_SHELL_ASYNCLOG=y
+CONFIG_HTTPC=y
+CONFIG_HTTP_CLIENT_AT_ENABLE=y

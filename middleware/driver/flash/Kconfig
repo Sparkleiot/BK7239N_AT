@@ -1,0 +1,101 @@
+menu "FLASH"
+	config FLASH
+		bool "Enable flash"
+		default y
+
+	config FLASH_QUAD_ENABLE
+		bool "Enable flash quad enable"
+		default n
+
+	config FLASH_SRC_CLK_60M
+		bool "Enable flash source clock 60M"
+		default n
+
+	config FLASH_ORIGIN_API
+		bool "Enable flash old api"
+		default n
+
+	config SUPPORT_PARTITIONS_PARTITION
+		bool "Enable flash partition"
+		default n
+
+	config PARTITION_ENCRYPTION
+		bool "Enable flash partition encryption"
+		default n
+		help
+		  Enable MBEDTLS-AES-XTS encryption/decryption for selected partitions.
+
+	config FLASH_MB
+		bool "Enable flash mailbox channel"
+		depends on MAILBOX
+		depends on !SOC_SMP
+		default n
+
+	config FLASH_TEST
+		depends on FLASH
+		bool "Enable flash test"
+		default y
+
+	config FLASH_RACE_TEST
+		depends on FLASH_TEST
+		bool "Enable flash race test"
+		default n
+
+	config FLASH_PSRAM_PRESSURE_TEST
+		depends on FLASH && DRIVER_TEST
+		bool "Enable flash test"
+		default n
+
+	config FLASH_PRESSURE_TEST
+		depends on FLASH && DRIVER_TEST
+		bool "Enable flash test"
+		default n
+
+	config PARTITION_TEST
+		depends on FLASH
+		bool "Enable pattition test"
+		default y
+
+	config FLASH_API_TEST
+		depends on FLASH
+		bool "Enable flash_api test"
+		default n
+
+	config FLASH_SVR_TEST
+		depends on FLASH_TEST
+		bool "Enable flash server test (multi-core flash mutex test)"
+		default n
+		help
+		  Enable flash_svr_test.c for multi-core flash access test.
+		  Only takes effect when CONFIG_CPU_CNT > 1. Single-core builds
+		  never compile this file.
+
+	config FLASH_WRITE_STATUS_VOLATILE
+		bool "Enable write volatile status register"
+		default y
+
+	config FLASH_PARTITION_CHECK_VALID
+		depends on FLASH
+		bool "Enable flash driver check write permission and address range"
+		default n
+
+	config FLASH_CLK_120M
+		depends on FLASH
+		bool "Enable flash clk using 120M"
+		default n
+
+	config FLASH_BYPASS_OTP_OPERATION
+		bool "Bypass flash to operate otp in flash"
+		default n
+
+	config EXT_FLASH_CLK_FREQ
+		depends on FLASH
+		int "Select flash clk frequency"
+		default "40000000"
+
+	config FLASH_CBUS
+		depends on FLASH
+		bool "Enable flash cbus API"
+		default n
+endmenu
+

@@ -1,0 +1,16 @@
+#TODO optimize it
+menu "Bk_Phy"
+
+	config PHY_LOG_ENABLE
+		bool "Enable voltage detect"
+		default n
+
+	config DPD_CALI
+		bool "Enable DPD Cali"
+		default n
+
+	config DPD_CALI_GROUP
+		int "Number of Group for DPD Cali"
+		default 8
+
+endmenu

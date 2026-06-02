@@ -1,0 +1,100 @@
+menu "BL2"
+	config BL2
+		bool "Enable BL2(MCUBOOT)"
+		default n
+
+	config MIXED_OTA
+		bool "both overwrite and xip"
+		default n
+
+	menu "Modify BL2 Info"
+		depends on BL2
+
+		config BL2_BUILD_TYPE
+			string "Define BL2 Build Type"
+			default "minsizerel"
+			help
+				build type: debug, release or minsizerel
+
+		config BL2_LOG_LEVEL
+			string "Define Bl2 Log Level"
+			default "INFO"
+			help
+				Set BL2 log level: OFF/ERROR/WARNING/INFO/DEBUG
+
+		config BL2_DOWNLOAD
+			bool "Enable BL2 download"
+			default n
+			help
+				Enable BL2 Download
+
+		config SECURE_DEBUG
+			bool "Enable Secure Debug"
+			default n
+			help
+				Enable Secure Debug
+
+		config BL2_UPGRADE_STRATEGY
+			string "Define mcuboot upgrade strategy"
+			default "OVERWRITE_ONLY"
+			help
+				The MCUBOOT upgrade strategy can be:
+				OVERWRITE_ONLY, DIRECT_XIP.
+
+		config ANTI_ROLLBACK
+			bool "Enable OTA anti-rollback"
+			default n
+
+		config BL2_SKIP_VALIDATE
+			bool "Bl2 skip validate"
+			default n
+
+		config BL2_VALIDATE_ENABLED_BY_EFUSE
+			bool "BL2 validate is enabled by eFuse"
+			default n
+
+		config BL2_WDT
+			bool "Enable BL2 watchdog"
+			default y
+
+		config BL2_DOWNLOAD
+			bool "Enable BL2 download"
+			default n
+
+		config BL2_WDT_PERIOD
+			hex "BL2 wdt timeout period"
+			default 0x1F40
+
+		config BL2_UPDATE_WITH_PC
+			bool "update BL2 with pc"
+			default n
+			help
+				update BL2 with pc
+
+		config RANDOM_AES_UPGRADE_BL2
+			bool "upgrade bl2 for random aes key"
+			default n
+			help
+				upgrade bl2 for random aes key
+
+		config OTA_CONFIRM_UPDATE
+			bool "confirm update after ota download"
+			default y
+			
+		config DBUS_CHECK_CRC
+			bool "do crc check before cbus read"
+			default y
+
+		config XIP_NO_VERSION
+			bool "xip without security counter and version"
+			default n
+
+		config DECOMPRESS_RESUME
+			bool "decompress resume"
+			default y
+
+		config BL2_UPGRADE_WITH_APP
+		bool "Enable BL2 upgrade with application"
+		default n
+	endmenu
+endmenu

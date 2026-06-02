@@ -1,0 +1,109 @@
+# ===== Beken ARMINO SDK 构建产物 =====
+# 主构建目录
+build/
+out/
+
+# ===== 组件目录生成的文件 =====
+# CMake/Kconfig 生成的配置文件
+components/**/kconfigs.in
+components/**/component_kconfigs.in
+components/**/middleware_kconfigs.in
+components/**/projects_kconfigs.in
+components/**/properties_kconfigs.in
+components/**/extra_kconfigs.in
+
+# 组件内部构建目录
+components/**/build/
+components/**/CMakeFiles/
+components/**/CMakeCache.txt
+
+# Python 缓存
+components/**/__pycache__/
+components/**/*.pyc
+components/**/*.pyo
+
+# 生成的头文件和源文件
+components/**/include/generated/
+components/**/autoconf.h
+
+# ===== 中间件和工具生成的文件 =====
+middleware/**/__pycache__/
+middleware/**/build/
+tools/**/__pycache__/
+tools/**/build/
+
+# ===== 编译输出文件 =====
+# 固件文件
+*.bin
+*.elf
+*.hex
+*.map
+*.rbl
+*.img
+*.s19
+*.mot
+
+# 特定命名规则的固件
+BK7239N_*.bin
+BK7238_*.bin
+*_CRC_*.bin
+
+# ===== 分区和配置文件 =====
+# 自动生成的分区表
+build/*/app/partitions/
+*.csv.bak
+
+# 系统持久化配置生成的文件
+build/*/app/sys_persist_config/
+
+# ===== CMake 相关 =====
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+compile_commands.json
+compile_commands.yaml
+
+# Ninja 构建文件
+.ninja_deps
+.ninja_log
+build.ninja
+
+# ===== Python 相关 =====
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+*.so
+
+# 虚拟环境
+venv/
+env/
+ENV/
+.venv
+
+# ===== IDE 和编辑器 =====
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+.project
+.cproject
+.settings/
+
+# ===== 日志和临时文件 =====
+*.log
+*.tmp
+*.temp
+Thumbs.db
+
+# ===== 文档生成 =====
+docs/_build/
+docs/build/
+
+# ===== 打包文件 =====
+package/
+dist/
+*.tar.gz
+*.zip

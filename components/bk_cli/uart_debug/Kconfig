@@ -1,0 +1,25 @@
+menu "modules::uart_debug"
+	config UART_DEBUG
+		depends on UART_ATE_PORT
+		bool "Enable Uart Debug"
+		default n
+
+	config ATE
+		bool "Enable ATE"
+		default y
+
+	config ATE_TEST
+		depends on ATE
+		bool "Enable ATE Test"
+		default n
+
+	config ATE_PHY_PWR_TBL_VERSION
+		depends on ATE
+		int "Select PHY_PWR_TBL version"
+		default "0"
+
+	config ATE_PHY_PWR_ANA_VERSION
+		depends on ATE
+		int "Select PHY_PWR_ANA version"
+		default "0"
+endmenu
