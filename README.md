@@ -377,3 +377,4 @@ OK
 - BK 官方网站：http://www.bekencorp.com
 - BK 官方文档：http://docs.bekencorp.com
 - 具体固件下载请前往 [Release 页面](https://github.com/Sparkleiot/BK7239N_AT/releases)
+- 如果需要定制固件请联系：song@sparkleiot.com
