@@ -2,7 +2,7 @@
 
 基于 BK 官方 SDK 改造的 BK7239N AT 固件，当前重点支持 2.4G / 5G 双频 WiFi、TCP、MQTT、HTTP/HTTPS 等串口 AT 能力。
 
-这个仓库的顶层 README 面向 GitHub 首页阅读，目标是帮助你快速了解固件能力、串口交互方式和常用测试链路。更细的底层实现和原始 SDK 文档，仍可参考仓库内组件文档。
+这个仓库的顶层 README 面向 GitHub 首页阅读，目标是帮助你快速了解固件能力、串口交互方式和常用测试链路。具体固件下载请前往 [Release 页面](https://github.com/Sparkleiot/BK7239N_AT/releases)。
 
 ## 项目简介
 
@@ -374,7 +374,6 @@ OK
 
 ## 参考资料
 
-- 组件级 AT 说明：[components/at_server/README.md](/home/ymy/Code/7239n-git/components/at_server/README.md)
-- WiFi AT 参考：[docs/bk7239n/zh_CN/developer-guide/wifi/bk_wifi_at.rst](/home/ymy/Code/7239n-git/docs/bk7239n/zh_CN/developer-guide/wifi/bk_wifi_at.rst)
-- MQTT 测试记录：[mqtt-at.md](/home/ymy/.codex/attachments/6c145354-f1be-424c-bb7e-1801d16a58cd/mqtt-at.md)
-- HTTP 测试记录：[http-at测试.md](/home/ymy/.codex/attachments/37523c25-51d3-4284-8829-cc1df7013fc9/http-at测试.md)
+- BK 官方网站：http://www.bekencorp.com
+- BK 官方文档：http://docs.bekencorp.com
+- 具体固件下载请前往 [Release 页面](https://github.com/Sparkleiot/BK7239N_AT/releases)
