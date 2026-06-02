@@ -1,6 +1,6 @@
 # BK7239N AT 固件
 
-基于 BK 官方 SDK 改造的 BK7239N AT 固件，当前重点支持 WiFi、TCP、MQTT、HTTP/HTTPS 等串口 AT 能力。
+基于 BK 官方 SDK 改造的 BK7239N AT 固件，当前重点支持 2.4G / 5G 双频 WiFi、TCP、MQTT、HTTP/HTTPS 等串口 AT 能力。
 
 这个仓库的顶层 README 面向 GitHub 首页阅读，目标是帮助你快速了解固件能力、串口交互方式和常用测试链路。更细的底层实现和原始 SDK 文档，仍可参考仓库内组件文档。
 
@@ -9,7 +9,7 @@
 当前固件聚焦以下使用场景：
 
 - 通过串口发送基础 AT 指令，验证固件状态与版本信息
-- 连接 2.4G WiFi，并查询连接状态或扫描周围 AP
+- 连接 2.4G / 5G 双频 WiFi，并查询连接状态或扫描周围 AP
 - 建立 TCP 客户端连接，进行发送、断开和简单透传
 - 连接 MQTT Broker，完成订阅、发布和大 payload 原始发布
 - 发起 HTTP/HTTPS 的 HEAD、GET、POST、PUT、DELETE 请求
