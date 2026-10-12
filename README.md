@@ -56,6 +56,23 @@
 - `AT+HTTPPOST`
 - `AT+HTTPPUT`
 
+## 源码编译
+
+在已配置好 SDK 编译环境的 Linux 或 WSL 终端中，进入仓库根目录执行：
+
+```bash
+make bk7239n
+```
+
+编译目标为 `bk7239n`，请勿写成 `bk7239`。
+
+编译成功后，固件输出位置如下：
+
+| 文件 | 路径 |
+| --- | --- |
+| 完整固件 | `build/bk7239n/app/package/all-app.bin` |
+| OTA 升级文件 | `build/bk7239n/app/package/app_pack.rbl` |
+
 ## 串口交互约定
 
 ### 启动提示
