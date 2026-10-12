@@ -106,4 +106,20 @@ docs/build/
 package/
 dist/
 *.tar.gz
+
+
+# SDK inputs required for compilation and firmware packaging
+!components/bk_wifi/include/generated/
+!components/bk_wifi/include/generated/*.h
+!components/secure_calibration/calibration/build/
+!components/secure_calibration/calibration/build/mk/
+!components/secure_calibration/calibration/build/mk/*.mk
+!components/bk_libs/bk7239n/bootloader/normal_bootloader/bootloader.bin
+!components/bk_libs/bk7239n/bootloader/ab_bootloader/bootloader.bin
+!tools/env_tools/beken_utils/scripts/gzipHeader.bin
+!tools/env_tools/beken_utils/scripts/libcommon.so
+!tools/env_tools/bksecure/scripts/gzipHeader.bin
+!tools/env_tools/bksecure/scripts/libcommon.so
+!tools/env_tools/rtt_ota/ota-rbl/gzipHeader.bin
+!tools/env_tools/beken_packager/flash_encrypt/tools/ota-rbl/gzipHeader.bin
 *.zip
